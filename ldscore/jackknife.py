@@ -168,6 +168,19 @@ class Jackknife(object):
         '''Define evenly-spaced block boundaries.'''
         return np.floor(np.linspace(0, N, n_blocks + 1)).astype(int)
 
+class LstsqJackknifeDummy(Jackknife):
+      def __init__(self, x, y):
+        #Jackknife.__init__(self, x, y, n_blocks, separators)
+        self.N, self.p = _check_shape(x, y)
+        self.n_blocks = 0
+        self.separators = None
+        self.est = np.atleast_2d(np.linalg.lstsq(x, np.array(y).T[0])[0])
+        self.delete_values = None
+        self.pseudovalues = None
+        self.jknife_est = None
+        self.jknife_var = None
+        self.jknife_se = None
+        self.jknife_cov = None
 
 class LstsqJackknifeSlow(Jackknife):
 
@@ -464,6 +477,16 @@ class RatioJackknife(Jackknife):
     '''
 
     def __init__(self, est, numer_delete_values, denom_delete_values):
+        if numer_delete_values is None:
+            self.n_blocks = 0
+            self.est = est
+            self.pseudovalues = None
+            self.jknife_est = None
+            self.jknife_var = None
+            self.jknife_se = None
+            self.jknife_cov = None
+            return
+
         if numer_delete_values.shape != denom_delete_values.shape:
             raise ValueError(
                 'numer_delete_values.shape != denom_delete_values.shape.')

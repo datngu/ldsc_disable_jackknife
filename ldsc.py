@@ -563,7 +563,7 @@ parser.add_argument('--yes-really', default=False, action='store_true',
 parser.add_argument('--invert-anyway', default=False, action='store_true',
     help="Force LDSC to attempt to invert ill-conditioned matrices.")
 parser.add_argument('--n-blocks', default=200, type=int,
-    help='Number of block jackknife blocks.')
+    help='Number of block jackknife blocks. Pass 0 to disable standard error estimation.')
 parser.add_argument('--not-M-5-50', default=False, action='store_true',
     help='This flag tells LDSC to use the .l2.M file instead of the .l2.M_5_50 file.')
 parser.add_argument('--return-silly-things', default=False, action='store_true',
@@ -598,8 +598,8 @@ if __name__ == '__main__':
         log.log(header)
         log.log('Beginning analysis at {T}'.format(T=time.ctime()))
         start_time = time.time()
-        if args.n_blocks <= 1:
-            raise ValueError('--n-blocks must be an integer > 1.')
+        if (args.n_blocks <= 1) and (args.n_blocks != 0):
+            raise ValueError('--n-blocks must be 0 (to disable standard error estimation), or an integer > 1.')
         if args.bfile is not None:
             if args.l2 is None:
                 raise ValueError('Must specify --l2 with --bfile.')

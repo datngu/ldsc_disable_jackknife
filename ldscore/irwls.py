@@ -119,7 +119,9 @@ class IRWLS(object):
 
         x = cls._weight(x, w)
         y = cls._weight(y, w)
-        if slow:
+        if n_blocks == 0:
+            jknife = jk.LstsqJackknifeDummy(x, y)
+        elif slow:
             jknife = jk.LstsqJackknifeSlow(
                 x, y, n_blocks, separators=separators)
         else:
@@ -133,7 +135,7 @@ class IRWLS(object):
         '''
         Weighted least squares.
 
-        Parameters
+        Parametersslow
         ----------
         x : np.matrix with shape (n, p)
             Independent variable.
