@@ -1,0 +1,73 @@
+Starting job 18226551 on c2-36 on Saga at Wed Jun 3 14:49:45 CEST 2026
+
+Started: Wed Jun  3 14:49:45 CEST 2026
+Job: 18226551; task: 33
+Host: c2-36
+Trait: PASS.Cigarettes_Per_Day.Liu2019
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Cigarettes_Per_Day.Liu2019.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Cigarettes_Per_Day.Liu2019.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Cigarettes_Per_Day.Liu2019.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:49:54 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Cigarettes_Per_Day.Liu2019.sumstats.gz ...
+Read summary statistics for 352680 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 350297 SNPs remain.
+After merging with regression SNP LD, 350297 SNPs remain.
+Removed 0 SNPs with chi^2 > 263.954 (350297 SNPs remain)
+Total Observed scale h2: 0.0708 (0.0056)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.0766 -0.0058
+Observed scale h2 SE: 0.0056 0.0034
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 1.0815 -0.0815
+Enrichment: 1.0872 -15.4517
+Coefficients: 1.2621e-08 -1.7937e-07
+Coefficient SE: 9.1551e-10 1.0569e-07
+Lambda GC: 1.2435
+Mean Chi^2: 1.3369
+Intercept: 1.0326 (0.0122)
+Ratio: 0.0967 (0.0363)
+Analysis finished at Wed Jun  3 14:51:17 2026
+Total time elapsed: 1.0m:23.099999999999994s
+Finished: Wed Jun  3 14:51:17 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Cigarettes_Per_Day.Liu2019.sldsc_sv.log
+
+Job 18226551 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 2.2 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.5 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226551           1            0.0 %  2026-06-03T14:49:45   92.0 s  0
+18226551.batch     1      1    93.5 %  2026-06-03T14:49:45   92.0 s  0
+
+Used CPU time:   1.4 CPU minutes
+Unused CPU time: 6.0 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226551          16.0        
+18226551.batch    16.0     3.5
+
+Job 18226551 completed at Wed Jun 3 14:51:17 CEST 2026

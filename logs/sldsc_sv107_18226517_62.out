@@ -1,0 +1,73 @@
+Starting job 18226581 on c2-43 on Saga at Wed Jun 3 14:51:45 CEST 2026
+
+Started: Wed Jun  3 14:51:45 CEST 2026
+Job: 18226581; task: 62
+Host: c2-43
+Trait: PASS.Medication_Use.Wu2019
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Medication_Use.Wu2019.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Medication_Use.Wu2019.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Medication_Use.Wu2019.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:52:02 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Medication_Use.Wu2019.sumstats.gz ...
+Read summary statistics for 1122710 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1116709 SNPs remain.
+After merging with regression SNP LD, 1116709 SNPs remain.
+Removed 0 SNPs with chi^2 > 80 (1116709 SNPs remain)
+Total Observed scale h2: 0.1563 (0.0111)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.1527 0.0036
+Observed scale h2 SE: 0.0111 0.0074
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9773 0.0227
+Enrichment: 0.9824 4.3144
+Coefficients: 2.5164e-08 1.1051e-07
+Coefficient SE: 1.8258e-09 2.2950e-07
+Lambda GC: 1.1999
+Mean Chi^2: 1.2502
+Intercept: 1.0603 (0.0077)
+Ratio: 0.2411 (0.0309)
+Analysis finished at Wed Jun  3 14:53:19 2026
+Total time elapsed: 1.0m:16.989999999999995s
+Finished: Wed Jun  3 14:53:19 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Medication_Use.Wu2019.sldsc_sv.log
+
+Job 18226581 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 4.2 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.6 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226581           1            0.0 %  2026-06-03T14:51:45   94.0 s  0
+18226581.batch     1      1    84.6 %  2026-06-03T14:51:45   94.0 s  0
+
+Used CPU time:   1.3 CPU minutes
+Unused CPU time: 14.5 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226581          16.0        
+18226581.batch    16.0     3.5
+
+Job 18226581 completed at Wed Jun 3 14:53:20 CEST 2026

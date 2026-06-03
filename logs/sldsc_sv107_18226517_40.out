@@ -1,0 +1,73 @@
+Starting job 18226558 on c3-16 on Saga at Wed Jun 3 14:50:13 CEST 2026
+
+Started: Wed Jun  3 14:50:13 CEST 2026
+Job: 18226558; task: 40
+Host: c3-16
+Trait: PASS.Education_Years.Rietveld2013
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Education_Years.Rietveld2013.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Education_Years.Rietveld2013.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Education_Years.Rietveld2013.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:50:22 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Education_Years.Rietveld2013.sumstats.gz ...
+Read summary statistics for 1008364 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1006165 SNPs remain.
+After merging with regression SNP LD, 1006165 SNPs remain.
+Removed 0 SNPs with chi^2 > 126.559 (1006165 SNPs remain)
+Total Observed scale h2: 0.0862 (0.0071)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.0813 0.0048
+Observed scale h2 SE: 0.007 0.004
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9437 0.0563
+Enrichment: 0.9487 10.6766
+Coefficients: 1.3396e-08 1.5076e-07
+Coefficient SE: 1.1463e-09 1.2470e-07
+Lambda GC: 1.1974
+Mean Chi^2: 1.2324
+Intercept: 1.0661 (0.0083)
+Ratio: 0.2842 (0.0357)
+Analysis finished at Wed Jun  3 14:51:43 2026
+Total time elapsed: 1.0m:21.709999999999994s
+Finished: Wed Jun  3 14:51:44 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Education_Years.Rietveld2013.sldsc_sv.log
+
+Job 18226558 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 2.7 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.5 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226558           1            0.0 %  2026-06-03T14:50:13   91.0 s  0
+18226558.batch     1      1    92.7 %  2026-06-03T14:50:13   91.0 s  0
+
+Used CPU time:   1.4 CPU minutes
+Unused CPU time: 6.6 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226558          16.0        
+18226558.batch    16.0     3.5
+
+Job 18226558 completed at Wed Jun 3 14:51:44 CEST 2026

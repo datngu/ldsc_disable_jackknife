@@ -1,0 +1,74 @@
+Starting job 18226584 on c2-29 on Saga at Wed Jun 3 14:51:45 CEST 2026
+
+Started: Wed Jun  3 14:51:45 CEST 2026
+Job: 18226584; task: 65
+Host: c2-29
+Trait: PASS.Physical_Activity.Wang2022
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Physical_Activity.Wang2022.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Physical_Activity.Wang2022.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Physical_Activity.Wang2022.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:52:02 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Physical_Activity.Wang2022.sumstats.gz ...
+Read summary statistics for 1184420 SNPs.
+Dropped 518 SNPs with duplicated rs numbers.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1165182 SNPs remain.
+After merging with regression SNP LD, 1165182 SNPs remain.
+Removed 0 SNPs with chi^2 > 608.595 (1165182 SNPs remain)
+Total Observed scale h2: 0.0311 (0.0019)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.0288 0.0022
+Observed scale h2 SE: 0.0018 0.0011
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9277 0.0723
+Enrichment: 0.9326 13.719
+Coefficients: 4.7517e-09 6.9901e-08
+Coefficient SE: 2.8877e-10 3.5505e-08
+Lambda GC: 1.2946
+Mean Chi^2: 1.3594
+Intercept: 1.0802 (0.0082)
+Ratio: 0.2231 (0.0227)
+Analysis finished at Wed Jun  3 14:53:19 2026
+Total time elapsed: 1.0m:17.159999999999997s
+Finished: Wed Jun  3 14:53:19 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Physical_Activity.Wang2022.sldsc_sv.log
+
+Job 18226584 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 4.2 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.6 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226584           1            0.0 %  2026-06-03T14:51:45   94.0 s  0
+18226584.batch     1      1    84.8 %  2026-06-03T14:51:45   94.0 s  0
+
+Used CPU time:   1.3 CPU minutes
+Unused CPU time: 14.3 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226584          16.0        
+18226584.batch    16.0     3.5
+
+Job 18226584 completed at Wed Jun 3 14:53:20 CEST 2026

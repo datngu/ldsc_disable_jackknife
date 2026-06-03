@@ -1,0 +1,73 @@
+Starting job 18226550 on c2-55 on Saga at Wed Jun 3 14:49:45 CEST 2026
+
+Started: Wed Jun  3 14:49:45 CEST 2026
+Job: 18226550; task: 32
+Host: c2-55
+Trait: PASS.Chronic_Obstructive_Pulmonary_Disease.Consentino2023
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Chronic_Obstructive_Pulmonary_Disease.Consentino2023.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Chronic_Obstructive_Pulmonary_Disease.Consentino2023.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Chronic_Obstructive_Pulmonary_Disease.Consentino2023.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:49:53 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Chronic_Obstructive_Pulmonary_Disease.Consentino2023.sumstats.gz ...
+Read summary statistics for 1183545 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1165559 SNPs remain.
+After merging with regression SNP LD, 1165559 SNPs remain.
+Removed 65 SNPs with chi^2 > 325.027 (1165494 SNPs remain)
+Total Observed scale h2: 0.2093 (0.0104)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.2084 0.0009
+Observed scale h2 SE: 0.0109 0.0057
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9956 0.0044
+Enrichment: 1.0009 0.8381
+Coefficients: 3.4334e-08 2.8752e-08
+Coefficient SE: 1.8007e-09 1.7693e-07
+Lambda GC: 1.7024
+Mean Chi^2: 2.2656
+Intercept: 1.2858 (0.022)
+Ratio: 0.2258 (0.0174)
+Analysis finished at Wed Jun  3 14:51:12 2026
+Total time elapsed: 1.0m:19.269999999999996s
+Finished: Wed Jun  3 14:51:13 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Chronic_Obstructive_Pulmonary_Disease.Consentino2023.sldsc_sv.log
+
+Job 18226550 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 2.2 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.5 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226550           1            0.0 %  2026-06-03T14:49:45   88.0 s  0
+18226550.batch     1      1    93.1 %  2026-06-03T14:49:45   88.0 s  0
+
+Used CPU time:   1.4 CPU minutes
+Unused CPU time: 6.0 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226550          16.0        
+18226550.batch    16.0     3.6
+
+Job 18226550 completed at Wed Jun 3 14:51:13 CEST 2026

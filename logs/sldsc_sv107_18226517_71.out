@@ -1,0 +1,73 @@
+Starting job 18226590 on c2-43 on Saga at Wed Jun 3 14:52:14 CEST 2026
+
+Started: Wed Jun  3 14:52:14 CEST 2026
+Job: 18226590; task: 71
+Host: c2-43
+Trait: PASS.Rheumatoid_Arthritis.Saevarsdottir2022
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Rheumatoid_Arthritis.Saevarsdottir2022.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Rheumatoid_Arthritis.Saevarsdottir2022.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Rheumatoid_Arthritis.Saevarsdottir2022.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:52:26 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Rheumatoid_Arthritis.Saevarsdottir2022.sumstats.gz ...
+Read summary statistics for 1184671 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1166014 SNPs remain.
+After merging with regression SNP LD, 1166014 SNPs remain.
+Removed 0 SNPs with chi^2 > 1026.69 (1166014 SNPs remain)
+Total Observed scale h2: 0.0134 (0.0017)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.0129 0.0005
+Observed scale h2 SE: 0.002  0.0007
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9602 0.0398
+Enrichment: 0.9653 7.5442
+Coefficients: 2.1188e-09 1.6559e-08
+Coefficient SE: 3.2333e-10 2.3293e-08
+Lambda GC: 1.1475
+Mean Chi^2: 1.2817
+Intercept: 1.0656 (0.0101)
+Ratio: 0.2328 (0.0359)
+Analysis finished at Wed Jun  3 14:53:43 2026
+Total time elapsed: 1.0m:16.760000000000005s
+Finished: Wed Jun  3 14:53:43 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Rheumatoid_Arthritis.Saevarsdottir2022.sldsc_sv.log
+
+Job 18226590 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 4.7 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.5 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226590           1            0.0 %  2026-06-03T14:52:14   89.0 s  0
+18226590.batch     1      1    89.1 %  2026-06-03T14:52:14   89.0 s  0
+
+Used CPU time:   1.3 CPU minutes
+Unused CPU time: 9.7 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226590          16.0        
+18226590.batch    16.0     3.6
+
+Job 18226590 completed at Wed Jun 3 14:53:43 CEST 2026

@@ -1,0 +1,73 @@
+Starting job 18226545 on c2-29 on Saga at Wed Jun 3 14:49:14 CEST 2026
+
+Started: Wed Jun  3 14:49:14 CEST 2026
+Job: 18226545; task: 27
+Host: c2-29
+Trait: PASS.Cancer_Esophageal.Gharahkhani2016
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Cancer_Esophageal.Gharahkhani2016.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Cancer_Esophageal.Gharahkhani2016.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Cancer_Esophageal.Gharahkhani2016.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:49:22 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Cancer_Esophageal.Gharahkhani2016.sumstats.gz ...
+Read summary statistics for 1189165 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1170755 SNPs remain.
+After merging with regression SNP LD, 1170755 SNPs remain.
+Removed 0 SNPs with chi^2 > 80 (1170755 SNPs remain)
+Total Observed scale h2: 0.203 (0.0292)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.1776 0.0254
+Observed scale h2 SE: 0.0288 0.0252
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.8749 0.1251
+Enrichment: 0.8796 23.7247
+Coefficients: 2.9267e-08 7.8945e-07
+Coefficient SE: 4.7404e-09 7.8356e-07
+Lambda GC: 1.0466
+Mean Chi^2: 1.0568
+Intercept: 0.9904 (0.0059)
+Ratio < 0 (usually indicates GC correction).
+Analysis finished at Wed Jun  3 14:50:37 2026
+Total time elapsed: 1.0m:15.0s
+Finished: Wed Jun  3 14:50:37 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Cancer_Esophageal.Gharahkhani2016.sldsc_sv.log
+
+Job 18226545 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 1.7 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.4 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226545           1            0.0 %  2026-06-03T14:49:14   83.0 s  0
+18226545.batch     1      1    93.3 %  2026-06-03T14:49:14   83.0 s  0
+
+Used CPU time:   1.3 CPU minutes
+Unused CPU time: 5.6 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226545          16.0        
+18226545.batch    16.0     3.6
+
+Job 18226545 completed at Wed Jun 3 14:50:37 CEST 2026

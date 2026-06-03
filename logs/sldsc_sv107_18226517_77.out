@@ -1,0 +1,73 @@
+Starting job 18226599 on c2-33 on Saga at Wed Jun 3 14:52:45 CEST 2026
+
+Started: Wed Jun  3 14:52:45 CEST 2026
+Job: 18226599; task: 77
+Host: c2-33
+Trait: PASS.Total_Hip_Replacement.Boer2021
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Total_Hip_Replacement.Boer2021.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Total_Hip_Replacement.Boer2021.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Total_Hip_Replacement.Boer2021.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:52:54 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Total_Hip_Replacement.Boer2021.sumstats.gz ...
+Read summary statistics for 1188612 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1169954 SNPs remain.
+After merging with regression SNP LD, 1169954 SNPs remain.
+Removed 0 SNPs with chi^2 > 319.086 (1169954 SNPs remain)
+Total Observed scale h2: 0.0457 (0.0035)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 4.5702e-02 3.3987e-05
+Observed scale h2 SE: 0.0037 0.0023
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 9.9926e-01 7.4311e-04
+Enrichment: 1.0046 0.1409
+Coefficients: 7.5298e-09 1.0565e-09
+Coefficient SE: 6.1686e-10 7.0098e-08
+Lambda GC: 1.1879
+Mean Chi^2: 1.2779
+Intercept: 1.0564 (0.0095)
+Ratio: 0.2028 (0.034)
+Analysis finished at Wed Jun  3 14:54:15 2026
+Total time elapsed: 1.0m:20.569999999999993s
+Finished: Wed Jun  3 14:54:15 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Total_Hip_Replacement.Boer2021.sldsc_sv.log
+
+Job 18226599 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 5.2 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.5 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226599           1            0.0 %  2026-06-03T14:52:45   90.0 s  0
+18226599.batch     1      1    92.3 %  2026-06-03T14:52:45   90.0 s  0
+
+Used CPU time:   1.4 CPU minutes
+Unused CPU time: 6.9 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226599          16.0        
+18226599.batch    16.0     3.6
+
+Job 18226599 completed at Wed Jun 3 14:54:16 CEST 2026

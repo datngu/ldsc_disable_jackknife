@@ -1,0 +1,73 @@
+Starting job 18226588 on c3-11 on Saga at Wed Jun 3 14:52:14 CEST 2026
+
+Started: Wed Jun  3 14:52:14 CEST 2026
+Job: 18226588; task: 69
+Host: c3-11
+Trait: PASS.Reticulocyte_Count.Vuckovic2020
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Reticulocyte_Count.Vuckovic2020.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Reticulocyte_Count.Vuckovic2020.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Reticulocyte_Count.Vuckovic2020.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:52:26 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Reticulocyte_Count.Vuckovic2020.sumstats.gz ...
+Read summary statistics for 1189835 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1170957 SNPs remain.
+After merging with regression SNP LD, 1170957 SNPs remain.
+Removed 603 SNPs with chi^2 > 408.112 (1170354 SNPs remain)
+Total Observed scale h2: 0.244 (0.0172)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.2346 0.0094
+Observed scale h2 SE: 0.0161 0.0079
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9616 0.0384
+Enrichment: 0.9667 7.2872
+Coefficients: 3.8656e-08 2.9141e-07
+Coefficient SE: 2.6608e-09 2.4457e-07
+Lambda GC: 1.6981
+Mean Chi^2: 2.7732
+Intercept: 1.4011 (0.0445)
+Ratio: 0.2262 (0.0251)
+Analysis finished at Wed Jun  3 14:53:44 2026
+Total time elapsed: 1.0m:18.709999999999994s
+Finished: Wed Jun  3 14:53:45 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Reticulocyte_Count.Vuckovic2020.sldsc_sv.log
+
+Job 18226588 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 4.7 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.5 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226588           1            0.0 %  2026-06-03T14:52:14   91.0 s  0
+18226588.batch     1      1    89.2 %  2026-06-03T14:52:14   91.0 s  0
+
+Used CPU time:   1.4 CPU minutes
+Unused CPU time: 9.9 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226588          16.0        
+18226588.batch    16.0     3.6
+
+Job 18226588 completed at Wed Jun 3 14:53:45 CEST 2026

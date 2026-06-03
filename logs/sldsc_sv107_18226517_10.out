@@ -1,0 +1,73 @@
+Starting job 18226527 on c2-43 on Saga at Wed Jun 3 14:47:45 CEST 2026
+
+Started: Wed Jun  3 14:47:45 CEST 2026
+Job: 18226527; task: 10
+Host: c2-43
+Trait: PANUKBB.Diverticulosis_And_Diverticulitis
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PANUKBB.Diverticulosis_And_Diverticulitis.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PANUKBB.Diverticulosis_And_Diverticulitis.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PANUKBB.Diverticulosis_And_Diverticulitis.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:47:53 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PANUKBB.Diverticulosis_And_Diverticulitis.sumstats.gz ...
+Read summary statistics for 1185336 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1169649 SNPs remain.
+After merging with regression SNP LD, 1169649 SNPs remain.
+Removed 0 SNPs with chi^2 > 365.887 (1169649 SNPs remain)
+Total Observed scale h2: 0.046 (0.0032)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.0433 0.0027
+Observed scale h2 SE: 0.0032 0.0022
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9406 0.0594
+Enrichment: 0.9456 11.2575
+Coefficients: 7.1346e-09 8.4935e-08
+Coefficient SE: 5.3467e-10 6.7257e-08
+Lambda GC: 1.2564
+Mean Chi^2: 1.3381
+Intercept: 1.0838 (0.01)
+Ratio: 0.2478 (0.0294)
+Analysis finished at Wed Jun  3 14:49:12 2026
+Total time elapsed: 1.0m:18.760000000000005s
+Finished: Wed Jun  3 14:49:12 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PANUKBB.Diverticulosis_And_Diverticulitis.sldsc_sv.log
+
+Job 18226527 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 14.0 seconds in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.4 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226527           1            0.0 %  2026-06-03T14:47:45   87.0 s  0
+18226527.batch     1      1    90.6 %  2026-06-03T14:47:45   87.0 s  0
+
+Used CPU time:   1.3 CPU minutes
+Unused CPU time: 8.2 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226527          16.0        
+18226527.batch    16.0     3.6
+
+Job 18226527 completed at Wed Jun 3 14:49:12 CEST 2026

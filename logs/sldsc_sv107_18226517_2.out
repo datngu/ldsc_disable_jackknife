@@ -1,0 +1,73 @@
+Starting job 18226519 on c5-60 on Saga at Wed Jun 3 14:47:45 CEST 2026
+
+Started: Wed Jun  3 14:47:46 CEST 2026
+Job: 18226519; task: 2
+Host: c5-60
+Trait: GBMI.Abdominal_Aortic_Aneurysm
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/GBMI.Abdominal_Aortic_Aneurysm.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/GBMI.Abdominal_Aortic_Aneurysm.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/GBMI.Abdominal_Aortic_Aneurysm.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:47:53 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/GBMI.Abdominal_Aortic_Aneurysm.sumstats.gz ...
+Read summary statistics for 1188966 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1170141 SNPs remain.
+After merging with regression SNP LD, 1170141 SNPs remain.
+Removed 0 SNPs with chi^2 > 1264.9180000000001 (1170141 SNPs remain)
+Total Observed scale h2: 0.0043 (0.0006)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.0045 -0.0002
+Observed scale h2 SE: 0.0006 0.0004
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 1.0509 -0.0509
+Enrichment: 1.0565 -9.6524
+Coefficients: 7.4958e-10 -6.8486e-09
+Coefficient SE: 9.7912e-11 1.1757e-08
+Lambda GC: 1.1038
+Mean Chi^2: 1.1239
+Intercept: 1.0377 (0.0066)
+Ratio: 0.3041 (0.0532)
+Analysis finished at Wed Jun  3 14:49:14 2026
+Total time elapsed: 1.0m:20.5s
+Finished: Wed Jun  3 14:49:14 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/GBMI.Abdominal_Aortic_Aneurysm.sldsc_sv.log
+
+Job 18226519 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 14.0 seconds in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.5 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226519           1            0.0 %  2026-06-03T14:47:45   89.0 s  0
+18226519.batch     1      1    91.3 %  2026-06-03T14:47:45   89.0 s  0
+
+Used CPU time:   1.4 CPU minutes
+Unused CPU time: 7.7 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226519          16.0        
+18226519.batch    16.0     3.5
+
+Job 18226519 completed at Wed Jun 3 14:49:14 CEST 2026

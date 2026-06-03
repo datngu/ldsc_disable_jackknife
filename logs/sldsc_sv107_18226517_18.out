@@ -1,0 +1,73 @@
+Starting job 18226536 on c2-4 on Saga at Wed Jun 3 14:47:45 CEST 2026
+
+Started: Wed Jun  3 14:47:45 CEST 2026
+Job: 18226536; task: 18
+Host: c2-4
+Trait: PASS.Alzheimers_Disease.Wightman2021
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Alzheimers_Disease.Wightman2021.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Alzheimers_Disease.Wightman2021.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Alzheimers_Disease.Wightman2021.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:47:53 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Alzheimers_Disease.Wightman2021.sumstats.gz ...
+Read summary statistics for 1025927 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1020787 SNPs remain.
+After merging with regression SNP LD, 1020787 SNPs remain.
+Removed 0 SNPs with chi^2 > 1126.563 (1020787 SNPs remain)
+Total Observed scale h2: 0.0077 (0.0008)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.007  0.0007
+Observed scale h2 SE: 0.0008 0.0006
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9093 0.0907
+Enrichment: 0.9141 17.2025
+Coefficients: 1.1571e-09 2.1775e-08
+Coefficient SE: 1.2682e-10 1.9421e-08
+Lambda GC: 1.1466
+Mean Chi^2: 1.1579
+Intercept: 1.0251 (0.011)
+Ratio: 0.1588 (0.0699)
+Analysis finished at Wed Jun  3 14:49:19 2026
+Total time elapsed: 1.0m:25.900000000000006s
+Finished: Wed Jun  3 14:49:19 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Alzheimers_Disease.Wightman2021.sldsc_sv.log
+
+Job 18226536 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 14.0 seconds in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.6 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226536           1            0.0 %  2026-06-03T14:47:45   94.0 s  0
+18226536.batch     1      1    93.4 %  2026-06-03T14:47:45   94.0 s  0
+
+Used CPU time:   1.5 CPU minutes
+Unused CPU time: 6.2 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226536          16.0        
+18226536.batch    16.0     3.6
+
+Job 18226536 completed at Wed Jun 3 14:49:20 CEST 2026

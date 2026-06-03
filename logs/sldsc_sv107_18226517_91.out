@@ -1,0 +1,73 @@
+Starting job 18226614 on c5-60 on Saga at Wed Jun 3 14:54:14 CEST 2026
+
+Started: Wed Jun  3 14:54:14 CEST 2026
+Job: 18226614; task: 91
+Host: c5-60
+Trait: UKB_460K.biochemistry_TotalBilirubin
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/UKB_460K.biochemistry_TotalBilirubin.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/UKB_460K.biochemistry_TotalBilirubin.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/UKB_460K.biochemistry_TotalBilirubin.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:54:23 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/UKB_460K.biochemistry_TotalBilirubin.sumstats.gz ...
+Read summary statistics for 1187344 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1171404 SNPs remain.
+After merging with regression SNP LD, 1171404 SNPs remain.
+Removed 556 SNPs with chi^2 > 429.423 (1170848 SNPs remain)
+Total Observed scale h2: 0.0877 (0.0124)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.0884 -0.0007
+Observed scale h2 SE: 0.012  0.0032
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 1.0076 -0.0076
+Enrichment: 1.013  -1.4441
+Coefficients: 1.4561e-08 -2.0758e-08
+Coefficient SE: 1.9805e-09 1.0043e-07
+Lambda GC: 1.4013
+Mean Chi^2: 1.8325
+Intercept: 1.2385 (0.0896)
+Ratio: 0.2865 (0.1077)
+Analysis finished at Wed Jun  3 14:55:42 2026
+Total time elapsed: 1.0m:19.349999999999994s
+Finished: Wed Jun  3 14:55:43 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/UKB_460K.biochemistry_TotalBilirubin.sldsc_sv.log
+
+Job 18226614 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 6.7 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.5 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226614           1            0.0 %  2026-06-03T14:54:14   89.0 s  0
+18226614.batch     1      1    92.2 %  2026-06-03T14:54:14   89.0 s  0
+
+Used CPU time:   1.4 CPU minutes
+Unused CPU time: 6.9 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226614          16.0        
+18226614.batch    16.0     3.5
+
+Job 18226614 completed at Wed Jun 3 14:55:43 CEST 2026

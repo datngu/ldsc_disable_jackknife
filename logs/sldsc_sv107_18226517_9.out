@@ -1,0 +1,73 @@
+Starting job 18226526 on c2-55 on Saga at Wed Jun 3 14:47:45 CEST 2026
+
+Started: Wed Jun  3 14:47:46 CEST 2026
+Job: 18226526; task: 9
+Host: c2-55
+Trait: PANUKBB.C44_Other_Malignant_Neoplasms_Of_Skin
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PANUKBB.C44_Other_Malignant_Neoplasms_Of_Skin.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PANUKBB.C44_Other_Malignant_Neoplasms_Of_Skin.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PANUKBB.C44_Other_Malignant_Neoplasms_Of_Skin.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:47:53 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PANUKBB.C44_Other_Malignant_Neoplasms_Of_Skin.sumstats.gz ...
+Read summary statistics for 1185336 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1169649 SNPs remain.
+After merging with regression SNP LD, 1169649 SNPs remain.
+Removed 1 SNPs with chi^2 > 420.531 (1169648 SNPs remain)
+Total Observed scale h2: 0.0236 (0.0037)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.0178 0.0058
+Observed scale h2 SE: 0.0033 0.0029
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.7548 0.2452
+Enrichment: 0.7588 46.5022
+Coefficients: 2.9352e-09 1.7988e-07
+Coefficient SE: 5.4678e-10 9.1397e-08
+Lambda GC: 1.1144
+Mean Chi^2: 1.186
+Intercept: 1.0512 (0.0126)
+Ratio: 0.2752 (0.0678)
+Analysis finished at Wed Jun  3 14:49:16 2026
+Total time elapsed: 1.0m:23.200000000000003s
+Finished: Wed Jun  3 14:49:17 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PANUKBB.C44_Other_Malignant_Neoplasms_Of_Skin.sldsc_sv.log
+
+Job 18226526 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 14.0 seconds in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.5 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226526           1            0.0 %  2026-06-03T14:47:45   92.0 s  0
+18226526.batch     1      1    92.3 %  2026-06-03T14:47:45   92.0 s  0
+
+Used CPU time:   1.4 CPU minutes
+Unused CPU time: 7.1 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226526          16.0        
+18226526.batch    16.0     3.6
+
+Job 18226526 completed at Wed Jun 3 14:49:17 CEST 2026

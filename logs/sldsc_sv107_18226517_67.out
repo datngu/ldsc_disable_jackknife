@@ -1,0 +1,73 @@
+Starting job 18226586 on c3-26 on Saga at Wed Jun 3 14:52:14 CEST 2026
+
+Started: Wed Jun  3 14:52:14 CEST 2026
+Job: 18226586; task: 67
+Host: c3-26
+Trait: PASS.Primary_Biliary_Cirrhosis.Cordell2015
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Primary_Biliary_Cirrhosis.Cordell2015.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Primary_Biliary_Cirrhosis.Cordell2015.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Primary_Biliary_Cirrhosis.Cordell2015.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:52:26 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Primary_Biliary_Cirrhosis.Cordell2015.sumstats.gz ...
+Read summary statistics for 1018862 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1013550 SNPs remain.
+After merging with regression SNP LD, 1013550 SNPs remain.
+Removed 17 SNPs with chi^2 > 80 (1013533 SNPs remain)
+Total Observed scale h2: 0.3392 (0.0625)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.353  -0.0138
+Observed scale h2 SE: 0.0668 0.0453
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 1.0407 -0.0407
+Enrichment: 1.0462 -7.7255
+Coefficients: 5.8159e-08 -4.2945e-07
+Coefficient SE: 1.1002e-08 1.4083e-06
+Lambda GC: 1.0496
+Mean Chi^2: 1.1038
+Intercept: 1.0288 (0.0086)
+Ratio: 0.2776 (0.0833)
+Analysis finished at Wed Jun  3 14:53:40 2026
+Total time elapsed: 1.0m:14.569999999999993s
+Finished: Wed Jun  3 14:53:40 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Primary_Biliary_Cirrhosis.Cordell2015.sldsc_sv.log
+
+Job 18226586 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 4.7 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.4 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226586           1            0.0 %  2026-06-03T14:52:14   86.0 s  0
+18226586.batch     1      1    89.5 %  2026-06-03T14:52:14   86.0 s  0
+
+Used CPU time:   1.3 CPU minutes
+Unused CPU time: 9.1 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226586          16.0        
+18226586.batch    16.0     3.6
+
+Job 18226586 completed at Wed Jun 3 14:53:41 CEST 2026

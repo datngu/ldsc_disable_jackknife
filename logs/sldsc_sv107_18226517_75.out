@@ -1,0 +1,73 @@
+Starting job 18226594 on c2-55 on Saga at Wed Jun 3 14:52:45 CEST 2026
+
+Started: Wed Jun  3 14:52:45 CEST 2026
+Job: 18226594; task: 75
+Host: c2-55
+Trait: PASS.Telomere_Length.Codd2021
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Telomere_Length.Codd2021.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Telomere_Length.Codd2021.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Telomere_Length.Codd2021.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:52:55 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Telomere_Length.Codd2021.sumstats.gz ...
+Read summary statistics for 1190232 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1171381 SNPs remain.
+After merging with regression SNP LD, 1171381 SNPs remain.
+Removed 58 SNPs with chi^2 > 472.17400000000004 (1171323 SNPs remain)
+Total Observed scale h2: 0.0715 (0.0079)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.0606 0.0109
+Observed scale h2 SE: 0.0083 0.0086
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.8471 0.1529
+Enrichment: 0.8516 28.9951
+Coefficients: 9.9774e-09 3.3970e-07
+Coefficient SE: 1.3690e-09 2.6628e-07
+Lambda GC: 1.2438
+Mean Chi^2: 1.5949
+Intercept: 1.0876 (0.017)
+Ratio: 0.1473 (0.0286)
+Analysis finished at Wed Jun  3 14:54:23 2026
+Total time elapsed: 1.0m:28.269999999999996s
+Finished: Wed Jun  3 14:54:23 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Telomere_Length.Codd2021.sldsc_sv.log
+
+Job 18226594 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 5.2 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.6 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226594           1            0.0 %  2026-06-03T14:52:45   98.0 s  0
+18226594.batch     1      1    93.5 %  2026-06-03T14:52:45   98.0 s  0
+
+Used CPU time:   1.5 CPU minutes
+Unused CPU time: 6.4 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226594          16.0        
+18226594.batch    16.0     3.5
+
+Job 18226594 completed at Wed Jun 3 14:54:24 CEST 2026

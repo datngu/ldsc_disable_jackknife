@@ -1,0 +1,73 @@
+Starting job 18226559 on c2-43 on Saga at Wed Jun 3 14:50:13 CEST 2026
+
+Started: Wed Jun  3 14:50:13 CEST 2026
+Job: 18226559; task: 41
+Host: c2-43
+Trait: PASS.Endometriosis.Rahmioglu2023
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Endometriosis.Rahmioglu2023.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Endometriosis.Rahmioglu2023.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Endometriosis.Rahmioglu2023.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:50:21 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Endometriosis.Rahmioglu2023.sumstats.gz ...
+Read summary statistics for 1181833 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1167730 SNPs remain.
+After merging with regression SNP LD, 1167730 SNPs remain.
+Removed 0 SNPs with chi^2 > 477.454 (1167730 SNPs remain)
+Total Observed scale h2: 0.0163 (0.0016)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.017  -0.0007
+Observed scale h2 SE: 0.0017 0.0011
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 1.0404 -0.0404
+Enrichment: 1.0459 -7.6691
+Coefficients: 2.8003e-09 -2.0532e-08
+Coefficient SE: 2.7269e-10 3.3263e-08
+Lambda GC: 1.039
+Mean Chi^2: 1.0902
+Intercept: 0.9626 (0.008)
+Ratio < 0 (usually indicates GC correction).
+Analysis finished at Wed Jun  3 14:51:39 2026
+Total time elapsed: 1.0m:17.61s
+Finished: Wed Jun  3 14:51:39 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Endometriosis.Rahmioglu2023.sldsc_sv.log
+
+Job 18226559 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 2.7 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.4 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226559           1            0.0 %  2026-06-03T14:50:13   86.0 s  0
+18226559.batch     1      1    93.2 %  2026-06-03T14:50:13   86.0 s  0
+
+Used CPU time:   1.3 CPU minutes
+Unused CPU time: 5.9 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226559          16.0        
+18226559.batch    16.0     3.5
+
+Job 18226559 completed at Wed Jun 3 14:51:39 CEST 2026

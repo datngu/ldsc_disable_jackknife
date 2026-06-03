@@ -1,0 +1,73 @@
+Starting job 18226535 on c2-7 on Saga at Wed Jun 3 14:47:45 CEST 2026
+
+Started: Wed Jun  3 14:47:45 CEST 2026
+Job: 18226535; task: 17
+Host: c2-7
+Trait: PASS.Alcohol_use.SanchezRoige2018
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Alcohol_use.SanchezRoige2018.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Alcohol_use.SanchezRoige2018.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Alcohol_use.SanchezRoige2018.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:47:53 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Alcohol_use.SanchezRoige2018.sumstats.gz ...
+Read summary statistics for 1181095 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1163210 SNPs remain.
+After merging with regression SNP LD, 1163210 SNPs remain.
+Removed 0 SNPs with chi^2 > 121.604 (1163210 SNPs remain)
+Total Observed scale h2: 0.0902 (0.0066)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.094  -0.0037
+Observed scale h2 SE: 0.0069 0.0038
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 1.041 -0.041
+Enrichment: 1.0465 -7.7814
+Coefficients: 1.5479e-08 -1.1509e-07
+Coefficient SE: 1.1438e-09 1.1951e-07
+Lambda GC: 1.1934
+Mean Chi^2: 1.2185
+Intercept: 1.0451 (0.0073)
+Ratio: 0.2065 (0.0335)
+Analysis finished at Wed Jun  3 14:49:18 2026
+Total time elapsed: 1.0m:24.489999999999995s
+Finished: Wed Jun  3 14:49:18 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Alcohol_use.SanchezRoige2018.sldsc_sv.log
+
+Job 18226535 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 14.0 seconds in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.6 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226535           1            0.0 %  2026-06-03T14:47:45   93.0 s  0
+18226535.batch     1      1    93.0 %  2026-06-03T14:47:45   93.0 s  0
+
+Used CPU time:   1.4 CPU minutes
+Unused CPU time: 6.5 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226535          16.0        
+18226535.batch    16.0     3.6
+
+Job 18226535 completed at Wed Jun 3 14:49:18 CEST 2026

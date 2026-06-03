@@ -1,0 +1,73 @@
+Starting job 18226576 on c2-7 on Saga at Wed Jun 3 14:51:15 CEST 2026
+
+Started: Wed Jun  3 14:51:15 CEST 2026
+Job: 18226576; task: 57
+Host: c2-7
+Trait: PASS.Ischemic_Stroke.Malik2018
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Ischemic_Stroke.Malik2018.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Ischemic_Stroke.Malik2018.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Ischemic_Stroke.Malik2018.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:51:24 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Ischemic_Stroke.Malik2018.sumstats.gz ...
+Read summary statistics for 1171472 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1163410 SNPs remain.
+After merging with regression SNP LD, 1163410 SNPs remain.
+Removed 0 SNPs with chi^2 > 440.32800000000003 (1163410 SNPs remain)
+Total Observed scale h2: 0.0125 (0.0016)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.0116 0.0009
+Observed scale h2 SE: 0.0015 0.001
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9309 0.0691
+Enrichment: 0.9358 13.1042
+Coefficients: 1.9177e-09 2.6853e-08
+Coefficient SE: 2.5416e-10 3.1175e-08
+Lambda GC: 1.1235
+Mean Chi^2: 1.1406
+Intercept: 1.0549 (0.007)
+Ratio: 0.3901 (0.0498)
+Analysis finished at Wed Jun  3 14:52:51 2026
+Total time elapsed: 1.0m:26.930000000000007s
+Finished: Wed Jun  3 14:52:51 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Ischemic_Stroke.Malik2018.sldsc_sv.log
+
+Job 18226576 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 3.7 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.6 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226576           1            0.0 %  2026-06-03T14:51:15   96.0 s  0
+18226576.batch     1      1    93.6 %  2026-06-03T14:51:15   96.0 s  0
+
+Used CPU time:   1.5 CPU minutes
+Unused CPU time: 6.1 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226576          16.0        
+18226576.batch    16.0     3.6
+
+Job 18226576 completed at Wed Jun 3 14:52:52 CEST 2026

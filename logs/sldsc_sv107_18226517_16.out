@@ -1,0 +1,73 @@
+Starting job 18226534 on c2-13 on Saga at Wed Jun 3 14:47:45 CEST 2026
+
+Started: Wed Jun  3 14:47:45 CEST 2026
+Job: 18226534; task: 16
+Host: c2-13
+Trait: PASS.Aging_Parental_Lifespan.Timmers2020
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Aging_Parental_Lifespan.Timmers2020.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Aging_Parental_Lifespan.Timmers2020.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Aging_Parental_Lifespan.Timmers2020.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:47:53 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Aging_Parental_Lifespan.Timmers2020.sumstats.gz ...
+Read summary statistics for 1187862 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1169723 SNPs remain.
+After merging with regression SNP LD, 1169723 SNPs remain.
+Removed 0 SNPs with chi^2 > 640.189 (1169723 SNPs remain)
+Total Observed scale h2: 0.0252 (0.0016)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.0241 0.0011
+Observed scale h2 SE: 0.0017 0.001
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9577 0.0423
+Enrichment: 0.9628 8.0146
+Coefficients: 3.9724e-09 3.3067e-08
+Coefficient SE: 2.7252e-10 3.1977e-08
+Lambda GC: 1.2922
+Mean Chi^2: 1.3343
+Intercept: 1.0995 (0.0094)
+Ratio: 0.2976 (0.028)
+Analysis finished at Wed Jun  3 14:49:19 2026
+Total time elapsed: 1.0m:25.67s
+Finished: Wed Jun  3 14:49:19 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Aging_Parental_Lifespan.Timmers2020.sldsc_sv.log
+
+Job 18226534 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 14.0 seconds in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.6 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226534           1            0.0 %  2026-06-03T14:47:45   94.0 s  0
+18226534.batch     1      1    94.0 %  2026-06-03T14:47:45   94.0 s  0
+
+Used CPU time:   1.5 CPU minutes
+Unused CPU time: 5.6 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226534          16.0        
+18226534.batch    16.0     3.6
+
+Job 18226534 completed at Wed Jun 3 14:49:19 CEST 2026

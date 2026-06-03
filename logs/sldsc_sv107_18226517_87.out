@@ -1,0 +1,73 @@
+Starting job 18226610 on c2-37 on Saga at Wed Jun 3 14:53:45 CEST 2026
+
+Started: Wed Jun  3 14:53:46 CEST 2026
+Job: 18226610; task: 87
+Host: c2-37
+Trait: UKB_460K.biochemistry_Creatinine
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/UKB_460K.biochemistry_Creatinine.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/UKB_460K.biochemistry_Creatinine.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/UKB_460K.biochemistry_Creatinine.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:53:53 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/UKB_460K.biochemistry_Creatinine.sumstats.gz ...
+Read summary statistics for 1187344 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1171404 SNPs remain.
+After merging with regression SNP LD, 1171404 SNPs remain.
+Removed 136 SNPs with chi^2 > 434.158 (1171268 SNPs remain)
+Total Observed scale h2: 0.2418 (0.012)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.222  0.0198
+Observed scale h2 SE: 0.0126 0.0072
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.918 0.082
+Enrichment: 0.9229 15.5533
+Coefficients: 3.6579e-08 6.1648e-07
+Coefficient SE: 2.0802e-09 2.2238e-07
+Lambda GC: 1.8643
+Mean Chi^2: 2.8945
+Intercept: 1.4069 (0.0312)
+Ratio: 0.2148 (0.0165)
+Analysis finished at Wed Jun  3 14:55:08 2026
+Total time elapsed: 1.0m:14.719999999999999s
+Finished: Wed Jun  3 14:55:08 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/UKB_460K.biochemistry_Creatinine.sldsc_sv.log
+
+Job 18226610 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 6.2 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.4 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226610           1            0.0 %  2026-06-03T14:53:45   83.0 s  0
+18226610.batch     1      1    92.9 %  2026-06-03T14:53:45   83.0 s  0
+
+Used CPU time:   1.3 CPU minutes
+Unused CPU time: 5.9 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226610          16.0        
+18226610.batch    16.0     3.6
+
+Job 18226610 completed at Wed Jun 3 14:55:09 CEST 2026

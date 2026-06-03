@@ -1,0 +1,73 @@
+Starting job 18226548 on c5-9 on Saga at Wed Jun 3 14:49:45 CEST 2026
+
+Started: Wed Jun  3 14:49:45 CEST 2026
+Job: 18226548; task: 30
+Host: c5-9
+Trait: PASS.Cannabis_Use_Disorder.Johnson2020
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Cannabis_Use_Disorder.Johnson2020.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Cannabis_Use_Disorder.Johnson2020.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Cannabis_Use_Disorder.Johnson2020.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:49:54 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Cannabis_Use_Disorder.Johnson2020.sumstats.gz ...
+Read summary statistics for 1166767 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1157719 SNPs remain.
+After merging with regression SNP LD, 1157719 SNPs remain.
+Removed 0 SNPs with chi^2 > 375.18 (1157719 SNPs remain)
+Total Observed scale h2: 0.0186 (0.0018)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.0198 -0.0012
+Observed scale h2 SE: 0.0019 0.0011
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 1.0666 -0.0666
+Enrichment: 1.0723 -12.6408
+Coefficients: 3.2672e-09 -3.8515e-08
+Coefficient SE: 3.1652e-10 3.4001e-08
+Lambda GC: 1.127
+Mean Chi^2: 1.1346
+Intercept: 1.027 (0.0065)
+Ratio: 0.2006 (0.0484)
+Analysis finished at Wed Jun  3 14:51:25 2026
+Total time elapsed: 1.0m:31.47s
+Finished: Wed Jun  3 14:51:26 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Cannabis_Use_Disorder.Johnson2020.sldsc_sv.log
+
+Job 18226548 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 2.2 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.7 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226548           1            0.0 %  2026-06-03T14:49:45  101.0 s  0
+18226548.batch     1      1    93.5 %  2026-06-03T14:49:45  101.0 s  0
+
+Used CPU time:   1.6 CPU minutes
+Unused CPU time: 6.6 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226548          16.0        
+18226548.batch    16.0     3.6
+
+Job 18226548 completed at Wed Jun 3 14:51:26 CEST 2026

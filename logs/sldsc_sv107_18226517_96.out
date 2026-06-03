@@ -1,0 +1,73 @@
+Starting job 18226619 on c2-33 on Saga at Wed Jun 3 14:54:45 CEST 2026
+
+Started: Wed Jun  3 14:54:45 CEST 2026
+Job: 18226619; task: 96
+Host: c2-33
+Trait: UKB_460K.blood_WHITE_COUNT
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/UKB_460K.blood_WHITE_COUNT.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/UKB_460K.blood_WHITE_COUNT.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/UKB_460K.blood_WHITE_COUNT.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:54:55 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/UKB_460K.blood_WHITE_COUNT.sumstats.gz ...
+Read summary statistics for 1187056 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1171188 SNPs remain.
+After merging with regression SNP LD, 1171188 SNPs remain.
+Removed 96 SNPs with chi^2 > 444.502 (1171092 SNPs remain)
+Total Observed scale h2: 0.2457 (0.0112)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.2346 0.0112
+Observed scale h2 SE: 0.0116 0.007
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9545 0.0455
+Enrichment: 0.9595 8.6322
+Coefficients: 3.8647e-08 3.4767e-07
+Coefficient SE: 1.9072e-09 2.1653e-07
+Lambda GC: 1.9197
+Mean Chi^2: 2.909
+Intercept: 1.4178 (0.0301)
+Ratio: 0.2188 (0.0158)
+Analysis finished at Wed Jun  3 14:56:15 2026
+Total time elapsed: 1.0m:20.730000000000004s
+Finished: Wed Jun  3 14:56:16 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/UKB_460K.blood_WHITE_COUNT.sldsc_sv.log
+
+Job 18226619 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 7.2 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.5 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226619           1            0.0 %  2026-06-03T14:54:45   91.0 s  0
+18226619.batch     1      1    91.4 %  2026-06-03T14:54:45   91.0 s  0
+
+Used CPU time:   1.4 CPU minutes
+Unused CPU time: 7.8 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226619          16.0        
+18226619.batch    16.0     3.6
+
+Job 18226619 completed at Wed Jun 3 14:56:16 CEST 2026

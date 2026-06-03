@@ -1,0 +1,73 @@
+Starting job 18226626 on c5-60 on Saga at Wed Jun 3 14:55:45 CEST 2026
+
+Started: Wed Jun  3 14:55:45 CEST 2026
+Job: 18226626; task: 103
+Host: c5-60
+Trait: UKB_460K.other_MORNINGPERSON
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/UKB_460K.other_MORNINGPERSON.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/UKB_460K.other_MORNINGPERSON.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/UKB_460K.other_MORNINGPERSON.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:55:55 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/UKB_460K.other_MORNINGPERSON.sumstats.gz ...
+Read summary statistics for 1187056 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1171188 SNPs remain.
+After merging with regression SNP LD, 1171188 SNPs remain.
+Removed 0 SNPs with chi^2 > 410.52 (1171188 SNPs remain)
+Total Observed scale h2: 0.1153 (0.0045)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.1144 0.001
+Observed scale h2 SE: 0.0046 0.0024
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9916 0.0084
+Enrichment: 0.9968 1.5985
+Coefficients: 1.8842e-08 3.0215e-08
+Coefficient SE: 7.606e-10 7.534e-08
+Lambda GC: 1.61
+Mean Chi^2: 1.8504
+Intercept: 1.161 (0.0119)
+Ratio: 0.1893 (0.014)
+Analysis finished at Wed Jun  3 14:57:12 2026
+Total time elapsed: 1.0m:17.560000000000002s
+Finished: Wed Jun  3 14:57:12 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/UKB_460K.other_MORNINGPERSON.sldsc_sv.log
+
+Job 18226626 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 8.2 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.4 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226626           1            0.0 %  2026-06-03T14:55:45   87.0 s  0
+18226626.batch     1      1    92.2 %  2026-06-03T14:55:45   87.0 s  0
+
+Used CPU time:   1.3 CPU minutes
+Unused CPU time: 6.8 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226626          16.0        
+18226626.batch    16.0     3.5
+
+Job 18226626 completed at Wed Jun 3 14:57:13 CEST 2026

@@ -1,0 +1,73 @@
+Starting job 18226578 on c3-15 on Saga at Wed Jun 3 14:51:45 CEST 2026
+
+Started: Wed Jun  3 14:51:45 CEST 2026
+Job: 18226578; task: 59
+Host: c3-15
+Trait: PASS.LDL.Teslovich2010
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.LDL.Teslovich2010.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.LDL.Teslovich2010.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.LDL.Teslovich2010.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:52:02 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.LDL.Teslovich2010.sumstats.gz ...
+Read summary statistics for 1017810 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1013546 SNPs remain.
+After merging with regression SNP LD, 1013546 SNPs remain.
+Removed 148 SNPs with chi^2 > 95.45400000000001 (1013398 SNPs remain)
+Total Observed scale h2: 0.1005 (0.0115)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.0998 0.0007
+Observed scale h2 SE: 0.0129 0.0066
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9932 0.0068
+Enrichment: 0.9984 1.2929
+Coefficients: 1.6437e-08 2.1284e-08
+Coefficient SE: 2.1233e-09 2.0628e-07
+Lambda GC: 1.0141
+Mean Chi^2: 1.1038
+Intercept: 0.9549 (0.0114)
+Ratio < 0 (usually indicates GC correction).
+Analysis finished at Wed Jun  3 14:53:26 2026
+Total time elapsed: 1.0m:24.0s
+Finished: Wed Jun  3 14:53:27 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.LDL.Teslovich2010.sldsc_sv.log
+
+Job 18226578 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 4.2 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.7 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226578           1            0.0 %  2026-06-03T14:51:45  102.0 s  0
+18226578.batch     1      1    84.8 %  2026-06-03T14:51:45  102.0 s  0
+
+Used CPU time:   1.4 CPU minutes
+Unused CPU time: 15.5 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226578          16.0        
+18226578.batch    16.0     3.6
+
+Job 18226578 completed at Wed Jun 3 14:53:27 CEST 2026

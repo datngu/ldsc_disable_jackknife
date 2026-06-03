@@ -1,0 +1,73 @@
+Starting job 18226562 on c3-26 on Saga at Wed Jun 3 14:50:45 CEST 2026
+
+Started: Wed Jun  3 14:50:45 CEST 2026
+Job: 18226562; task: 44
+Host: c3-26
+Trait: PASS.Fetal_Birth_Weight.Warrington2019
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Fetal_Birth_Weight.Warrington2019.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Fetal_Birth_Weight.Warrington2019.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Fetal_Birth_Weight.Warrington2019.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:50:53 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Fetal_Birth_Weight.Warrington2019.sumstats.gz ...
+Read summary statistics for 1189083 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1170596 SNPs remain.
+After merging with regression SNP LD, 1170596 SNPs remain.
+Removed 3 SNPs with chi^2 > 298.142 (1170593 SNPs remain)
+Total Observed scale h2: 0.1149 (0.0071)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.1066 0.0084
+Observed scale h2 SE: 0.007  0.0051
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9273 0.0727
+Enrichment: 0.9322 13.7859
+Coefficients: 1.7559e-08 2.5966e-07
+Coefficient SE: 1.1601e-09 1.5922e-07
+Lambda GC: 1.3936
+Mean Chi^2: 1.6276
+Intercept: 1.1681 (0.0161)
+Ratio: 0.2679 (0.0257)
+Analysis finished at Wed Jun  3 14:52:08 2026
+Total time elapsed: 1.0m:15.0s
+Finished: Wed Jun  3 14:52:08 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Fetal_Birth_Weight.Warrington2019.sldsc_sv.log
+
+Job 18226562 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 3.2 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.4 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226562           1            0.0 %  2026-06-03T14:50:45   83.0 s  0
+18226562.batch     1      1    93.2 %  2026-06-03T14:50:45   83.0 s  0
+
+Used CPU time:   1.3 CPU minutes
+Unused CPU time: 5.7 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226562          16.0        
+18226562.batch    16.0     3.6
+
+Job 18226562 completed at Wed Jun 3 14:52:09 CEST 2026

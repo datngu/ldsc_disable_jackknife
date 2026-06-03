@@ -1,0 +1,73 @@
+Starting job 18226567 on c2-43 on Saga at Wed Jun 3 14:50:45 CEST 2026
+
+Started: Wed Jun  3 14:50:45 CEST 2026
+Job: 18226567; task: 49
+Host: c2-43
+Trait: PASS.Glaucoma.Craig2020
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Glaucoma.Craig2020.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Glaucoma.Craig2020.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Glaucoma.Craig2020.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:50:53 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Glaucoma.Craig2020.sumstats.gz ...
+Read summary statistics for 1166968 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1157810 SNPs remain.
+After merging with regression SNP LD, 1157810 SNPs remain.
+Removed 137 SNPs with chi^2 > 80 (1157673 SNPs remain)
+Total Observed scale h2: 0.3582 (0.0254)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.3452 0.0131
+Observed scale h2 SE: 0.0235 0.0145
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9635 0.0365
+Enrichment: 0.9686 6.9228
+Coefficients: 5.6868e-08 4.0644e-07
+Coefficient SE: 3.8736e-09 4.4982e-07
+Lambda GC: 1.1908
+Mean Chi^2: 1.3742
+Intercept: 1.0116 (0.013)
+Ratio: 0.0311 (0.0348)
+Analysis finished at Wed Jun  3 14:52:10 2026
+Total time elapsed: 1.0m:16.659999999999997s
+Finished: Wed Jun  3 14:52:10 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Glaucoma.Craig2020.sldsc_sv.log
+
+Job 18226567 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 3.2 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.4 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226567           1            0.0 %  2026-06-03T14:50:45   85.0 s  0
+18226567.batch     1      1    93.1 %  2026-06-03T14:50:45   85.0 s  0
+
+Used CPU time:   1.3 CPU minutes
+Unused CPU time: 5.9 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226567          16.0        
+18226567.batch    16.0     3.6
+
+Job 18226567 completed at Wed Jun 3 14:52:10 CEST 2026

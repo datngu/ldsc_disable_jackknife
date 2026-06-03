@@ -1,0 +1,74 @@
+Starting job 18226486 on c3-26 on Saga at Wed Jun 3 14:34:14 CEST 2026
+
+Started: Wed Jun  3 14:34:14 CEST 2026
+Host: c3-26
+Python:
+/cluster/projects/nn9114k/datngu/conda/envs/ldsc/bin/python
+3.8.20 | packaged by conda-forge | (default, Sep 30 2024, 17:52:49) 
+[GCC 13.3.0]
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/height_yengo2022_sv_mixer_test/PASS.Height.Yengo2022.sv_mixer_eur \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Height.Yengo2022.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:34:31 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Height.Yengo2022.sumstats.gz ...
+Read summary statistics for 1080092 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1063537 SNPs remain.
+After merging with regression SNP LD, 1063537 SNPs remain.
+Removed 295 SNPs with chi^2 > 1597.374 (1063242 SNPs remain)
+Total Observed scale h2: 0.6277 (0.0356)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.6235 0.0042
+Observed scale h2 SE: 0.0356 0.0124
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9933 0.0067
+Enrichment: 0.9986 1.27
+Coefficients: 1.0272e-07 1.3065e-07
+Coefficient SE: 5.8695e-09 3.8447e-07
+Lambda GC: 5.1513
+Mean Chi^2: 14.4899
+Intercept: 2.8154 (0.2122)
+Ratio: 0.1346 (0.0157)
+Analysis finished at Wed Jun  3 14:35:51 2026
+Total time elapsed: 1.0m:19.61s
+Finished: Wed Jun  3 14:35:51 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/height_yengo2022_sv_mixer_test/PASS.Height.Yengo2022.sv_mixer_eur.log
+
+Job 18226486 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:34:02; waited 11.0 seconds in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.6 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226486           1            0.0 %  2026-06-03T14:34:13   98.0 s  0
+18226486.batch     1      1    80.9 %  2026-06-03T14:34:13   98.0 s  0
+
+Used CPU time:   1.3 CPU minutes
+Unused CPU time: 18.8 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226486          16.0        
+18226486.batch    16.0     3.6
+
+Job 18226486 completed at Wed Jun 3 14:35:51 CEST 2026

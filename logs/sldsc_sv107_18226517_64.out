@@ -1,0 +1,73 @@
+Starting job 18226583 on c2-36 on Saga at Wed Jun 3 14:51:45 CEST 2026
+
+Started: Wed Jun  3 14:51:45 CEST 2026
+Job: 18226583; task: 64
+Host: c2-36
+Trait: PASS.Parkinson.Nalls2019
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Parkinson.Nalls2019.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Parkinson.Nalls2019.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Parkinson.Nalls2019.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:52:04 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Parkinson.Nalls2019.sumstats.gz ...
+Read summary statistics for 1189254 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1170409 SNPs remain.
+After merging with regression SNP LD, 1170409 SNPs remain.
+Removed 0 SNPs with chi^2 > 482.73 (1170409 SNPs remain)
+Total Observed scale h2: 0.0159 (0.0018)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.0167 -0.0008
+Observed scale h2 SE: 0.0019 0.0013
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 1.0529 -0.0529
+Enrichment: 1.0585 -10.0305
+Coefficients: 2.7506e-09 -2.6066e-08
+Coefficient SE: 3.1859e-10 3.9104e-08
+Lambda GC: 1.088
+Mean Chi^2: 1.1324
+Intercept: 1.0136 (0.0062)
+Ratio: 0.1027 (0.0471)
+Analysis finished at Wed Jun  3 14:53:28 2026
+Total time elapsed: 1.0m:23.92s
+Finished: Wed Jun  3 14:53:28 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Parkinson.Nalls2019.sldsc_sv.log
+
+Job 18226583 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 4.2 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.7 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226583           1            0.0 %  2026-06-03T14:51:45  103.0 s  0
+18226583.batch     1      1    84.3 %  2026-06-03T14:51:45  103.0 s  0
+
+Used CPU time:   1.4 CPU minutes
+Unused CPU time: 16.1 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226583          16.0        
+18226583.batch    16.0     3.6
+
+Job 18226583 completed at Wed Jun 3 14:53:29 CEST 2026

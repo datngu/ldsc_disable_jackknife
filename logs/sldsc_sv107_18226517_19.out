@@ -1,0 +1,73 @@
+Starting job 18226537 on c5-60 on Saga at Wed Jun 3 14:48:13 CEST 2026
+
+Started: Wed Jun  3 14:48:13 CEST 2026
+Job: 18226537; task: 19
+Host: c5-60
+Trait: PASS.Anorexia_Nervosa.Watson2019
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Anorexia_Nervosa.Watson2019.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Anorexia_Nervosa.Watson2019.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Anorexia_Nervosa.Watson2019.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:48:23 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Anorexia_Nervosa.Watson2019.sumstats.gz ...
+Read summary statistics for 1123711 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1115862 SNPs remain.
+After merging with regression SNP LD, 1115862 SNPs remain.
+Removed 0 SNPs with chi^2 > 80 (1115862 SNPs remain)
+Total Observed scale h2: 0.1943 (0.0141)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.1919 0.0024
+Observed scale h2 SE: 0.0134 0.0083
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9876 0.0124
+Enrichment: 0.9929 2.3438
+Coefficients: 3.1619e-08 7.4640e-08
+Coefficient SE: 2.2043e-09 2.5773e-07
+Lambda GC: 1.2388
+Mean Chi^2: 1.2796
+Intercept: 1.0643 (0.0094)
+Ratio: 0.2301 (0.0335)
+Analysis finished at Wed Jun  3 14:49:40 2026
+Total time elapsed: 1.0m:17.150000000000006s
+Finished: Wed Jun  3 14:49:40 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/PASS.Anorexia_Nervosa.Watson2019.sldsc_sv.log
+
+Job 18226537 consumed 0.1 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 42.0 seconds in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   1.4 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226537           1            0.0 %  2026-06-03T14:48:13   87.0 s  0
+18226537.batch     1      1    91.7 %  2026-06-03T14:48:13   87.0 s  0
+
+Used CPU time:   1.3 CPU minutes
+Unused CPU time: 7.2 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226537          16.0        
+18226537.batch    16.0     3.6
+
+Job 18226537 completed at Wed Jun 3 14:49:40 CEST 2026

@@ -1,0 +1,73 @@
+Starting job 18226608 on c3-3 on Saga at Wed Jun 3 14:53:45 CEST 2026
+
+Started: Wed Jun  3 14:53:45 CEST 2026
+Job: 18226608; task: 85
+Host: c3-3
+Trait: UKB_460K.biochemistry_AspartateAminotransferase
+Sumstats: /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/UKB_460K.biochemistry_AspartateAminotransferase.sumstats.gz
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/UKB_460K.biochemistry_AspartateAminotransferase.sldsc_sv \
+--h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/UKB_460K.biochemistry_AspartateAminotransferase.sumstats.gz \
+--ref-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr \
+--w-ld-chr /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr 
+
+Beginning analysis at Wed Jun  3 14:53:56 2026
+Reading summary statistics from /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/UKB_460K.biochemistry_AspartateAminotransferase.sumstats.gz ...
+Read summary statistics for 1187344 SNPs.
+Reading reference panel LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/ldscore/chr[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 9299279 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/ldsc_mixer_sv_reference/weights/chr[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 9299279 SNPs.
+After merging with reference panel LD, 1171404 SNPs remain.
+After merging with regression SNP LD, 1171404 SNPs remain.
+Removed 61 SNPs with chi^2 > 430.982 (1171343 SNPs remain)
+Total Observed scale h2: 0.1268 (0.0087)
+Categories: outside_regionL2_0 within_regionL2_0
+Observed scale h2: 0.115  0.0118
+Observed scale h2 SE: 0.0077 0.0052
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9071 0.0929
+Enrichment: 0.9119 17.6178
+Coefficients: 1.8950e-08 3.6611e-07
+Coefficient SE: 1.2686e-09 1.6222e-07
+Lambda GC: 1.4645
+Mean Chi^2: 1.9691
+Intercept: 1.2148 (0.0197)
+Ratio: 0.2216 (0.0204)
+Analysis finished at Wed Jun  3 14:56:21 2026
+Total time elapsed: 2.0m:24.349999999999994s
+Finished: Wed Jun  3 14:56:21 CEST 2026
+LDSC log: /cluster/projects/nn9114k/datngu/projects/ofrei_ldsc/results/sldsc_sumstats_107/UKB_460K.biochemistry_AspartateAminotransferase.sldsc_sv.log
+
+Job 18226608 consumed 0.2 billing hours from project nn9114k.
+
+Submitted 2026-06-03T14:47:31; waited 6.2 minutes in the queue after becoming eligible to run.
+
+Requested wallclock time: 6.0 hours
+Elapsed wallclock time:   2.6 minutes
+
+Job exited normally.
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+18226608           1            0.0 %  2026-06-03T14:53:45  156.0 s  0
+18226608.batch     1      1    95.5 %  2026-06-03T14:53:45  156.0 s  0
+
+Used CPU time:   2.5 CPU minutes
+Unused CPU time: 7.0 CPU seconds
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+18226608          16.0        
+18226608.batch    16.0     2.9
+
+Job 18226608 completed at Wed Jun 3 14:56:22 CEST 2026
