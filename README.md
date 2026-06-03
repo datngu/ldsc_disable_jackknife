@@ -1,119 +1,245 @@
+# LDSC Python 3 Fork
 
-# LDSC (LD SCore) `v1.0.1`
+This repository contains a Python 3 port of LDSC v1.0.1 with local workflows for
+stratified LD Score regression (sLDSC) against structural variant (SV) annotations.
 
-`ldsc` is a command line tool for estimating heritability and genetic correlation from GWAS summary statistics. `ldsc` also computes LD Scores.
+The code has been tested in the `ldsc` conda environment on Saga with:
 
-## Getting Started
+- Python 3.8.20
+- NumPy 1.24.3
+- pandas 1.5.3
+- SciPy 1.10.1
+- bitarray 2.6.0
 
+## Setup
 
+Create or update the conda environment:
 
-In order to download `ldsc`, you should clone this repository via the commands
-```  
-git clone https://github.com/bulik/ldsc.git
-cd ldsc
-```
-
-In order to install the Python dependencies, you will need the [Anaconda](https://store.continuum.io/cshop/anaconda/) Python distribution and package manager. After installing Anaconda, run the following commands to create an environment with LDSC's dependencies:
-
-```
+```bash
 conda env create --file environment.yml
-source activate ldsc
+conda activate ldsc
 ```
 
-Once the above has completed, you can run:
+For an existing environment:
 
-```
-./ldsc.py -h
-./munge_sumstats.py -h
-```
-to print a list of all command-line options. If these commands fail with an error, then something as gone wrong during the installation process. 
-
-Short tutorials describing the four basic functions of `ldsc` (estimating LD Scores, h2 and partitioned h2, genetic correlation, the LD Score regression intercept) can be found in the wiki. If you would like to run the tests, please see the wiki.
-
-## Updating LDSC
-
-You can update to the newest version of `ldsc` using `git`. First, navigate to your `ldsc/` directory (e.g., `cd ldsc`), then run
-```
-git pull
-```
-If `ldsc` is up to date, you will see 
-```
-Already up-to-date.
-```
-otherwise, you will see `git` output similar to 
-```
-remote: Counting objects: 3, done.
-remote: Compressing objects: 100% (3/3), done.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (3/3), done.
-From https://github.com/bulik/ldsc
-   95f4db3..a6a6b18  master     -> origin/master
-Updating 95f4db3..a6a6b18
-Fast-forward
- README.md | 15 +++++++++++++++
- 1 file changed, 15 insertions(+)
- ```
-which tells you which files were changed. If you have modified the `ldsc` source code, `git pull` may fail with an error such as `error: Your local changes to the following files would be overwritten by merge:`. 
-
-In case the Python dependencies have changed, you can update the LDSC environment with
-
-```
+```bash
 conda env update --file environment.yml
+conda activate ldsc
 ```
 
-## Where Can I Get LD Scores?
+Basic checks:
 
-You can download [European](https://data.broadinstitute.org/alkesgroup/LDSCORE/eur_w_ld_chr.tar.bz2) and [East Asian LD Scores](https://data.broadinstitute.org/alkesgroup/LDSCORE/eas_ldscores.tar.bz2) from 1000 Genomes [here](https://data.broadinstitute.org/alkesgroup/LDSCORE/). These LD Scores are suitable for basic LD Score analyses (the LD Score regression intercept, heritability, genetic correlation, cross-sex genetic correlation). You can download partitioned LD Scores for partitioned heritability estimation [here](http://data.broadinstitute.org/alkesgroup/LDSCORE/).
+```bash
+python ldsc.py -h
+python munge_sumstats.py -h
+nosetests -v test
+```
 
+The current Python 3 port passes the full test suite:
 
-## Support
+```text
+Ran 167 tests
+OK
+```
 
-Before contacting us, please try the following:
+## Standard LDSC Usage
 
-1. The [wiki](https://github.com/bulik/ldsc/wiki) has tutorials on [estimating LD Score](https://github.com/bulik/ldsc/wiki/LD-Score-Estimation-Tutorial), [heritability, genetic correlation and the LD Score regression intercept](https://github.com/bulik/ldsc/wiki/Heritability-and-Genetic-Correlation) and [partitioned heritability](https://github.com/bulik/ldsc/wiki/Partitioned-Heritability).
-2. Common issues are described in the [FAQ](https://github.com/bulik/ldsc/wiki/FAQ)
-2. The methods are described in the papers (citations below)
+Estimate SNP heritability from LDSC-formatted summary statistics:
 
-If that doesn't work, you can get in touch with us via the [google group](https://groups.google.com/forum/?hl=en#!forum/ldsc_users).
+```bash
+python ldsc.py \
+  --h2 trait.sumstats.gz \
+  --ref-ld-chr path/to/ref/chr \
+  --w-ld-chr path/to/weights/chr \
+  --out results/trait
+```
 
-Issues with LD Hub?  Email ld-hub@bristol.ac.uk
+The input summary statistics should contain:
 
+```text
+SNP A1 A2 N Z
+```
+
+If a file contains `BETA` and `SE`, compute `Z = BETA / SE` and write the LDSC
+columns before running `ldsc.py`.
+
+## SV sLDSC Reference
+
+The local SV reference is expected at:
+
+```text
+ldsc_mixer_sv_reference/
+```
+
+This directory was generated with:
+
+```text
+make_ldsc_annot.py
+make_ldsc.sh
+```
+
+`make_ldsc_annot.py` creates LDSC-compatible annotation, partitioned LD-score,
+and regression-weight files from the same MiXeR-SV LD matrix and annotation
+matrix used by MiXeR-SV. With an SV SNP list, it writes two region annotations:
+
+```text
+outside_region
+within_region
+```
+
+`make_ldsc.sh` is the wrapper used to run `make_ldsc_annot.py` and write the
+`ldsc_mixer_sv_reference/` directory. Edit its `LD_DIR`, `ANNOT`, and
+`SNP_FILE` variables when rebuilding the reference on a different machine or
+from a different MiXeR-SV input directory.
+
+It contains:
+
+```text
+ldsc_mixer_sv_reference/ldscore/chr*.l2.ldscore.gz
+ldsc_mixer_sv_reference/ldscore/chr*.l2.M
+ldsc_mixer_sv_reference/ldscore/chr*.l2.M_5_50
+ldsc_mixer_sv_reference/weights/chr*.l2.ldscore.gz
+```
+
+The partitioned LD score files include two annotation columns:
+
+```text
+outside_regionL2
+within_regionL2
+```
+
+Thus `--h2` with this reference runs partitioned LDSC/sLDSC and estimates
+heritability enrichment for non-SV regions versus SV regions.
+
+Example:
+
+```bash
+python ldsc.py \
+  --h2 /cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/PASS.Height.Yengo2022.sumstats.gz \
+  --ref-ld-chr ldsc_mixer_sv_reference/ldscore/chr \
+  --w-ld-chr ldsc_mixer_sv_reference/weights/chr \
+  --out results/height_yengo2022_sv_mixer_test/PASS.Height.Yengo2022.sv_mixer_eur
+```
+
+Example Height result:
+
+```text
+Total Observed scale h2: 0.6277 (0.0356)
+Categories: outside_regionL2_0 within_regionL2_0
+Proportion of SNPs: 0.9947 0.0053
+Proportion of h2g: 0.9933 0.0067
+Enrichment: 0.9986 1.27
+```
+
+## Saga Slurm Workflows
+
+Run the Height smoke test:
+
+```bash
+sbatch run_height_yengo2022_sv_mixer_test.sh
+```
+
+Run sLDSC for all summary statistics in:
+
+```text
+/cluster/projects/nn9114k/datngu/database/alkes_group_data/sumstats_107/*sumstats.gz
+```
+
+with:
+
+```bash
+sbatch run_sldsc_sumstats_107_array.sh
+```
+
+The array script uses:
+
+```text
+#SBATCH --account=nn9114k
+#SBATCH --time=6:00:00
+#SBATCH --mem=16G
+#SBATCH --cpus-per-task=1
+#SBATCH --array=1-106%30
+```
+
+The manifest is:
+
+```text
+manifests/sumstats_107.txt
+```
+
+Outputs are written to:
+
+```text
+results/sldsc_sumstats_107/
+logs/
+```
+
+`FIXED.Schizophrenia.Trubetskoy2022.sumstats.gz` uses `ID A1 A2 N BETA SE`
+instead of `SNP A1 A2 N Z`. For that file, the completed workflow converts
+`ID -> SNP` and `Z = BETA / SE`, then runs:
+
+```bash
+sbatch run_sldsc_schizophrenia_converted.sh
+```
+
+## Compare sLDSC With MiXeR-SV
+
+MiXeR-SV result files are expected at:
+
+```text
+/cluster/projects/nn9114k/datngu/projects/mixer_sv/saga_results_107/*_list.txt
+```
+
+Collect and compare the two methods:
+
+```bash
+MPLCONFIGDIR=/tmp/ofrei_ldsc_mpl python scripts/collect_sldsc_mixer_sv_results.py \
+  --manifest manifests/sumstats_107.txt \
+  --ldsc-dir results/sldsc_sumstats_107 \
+  --mixer-dir /cluster/projects/nn9114k/datngu/projects/mixer_sv/saga_results_107 \
+  --out-dir results/sldsc_sumstats_107/comparison
+```
+
+Generated files:
+
+```text
+results/sldsc_sumstats_107/comparison/sldsc_mixer_sv_comparison.tsv
+results/sldsc_sumstats_107/comparison/sldsc_mixer_sv_correlations.tsv
+results/sldsc_sumstats_107/comparison/scatter_within_region_enrichment.png
+results/sldsc_sumstats_107/comparison/scatter_total_h2.png
+```
+
+Current comparison across 106 traits:
+
+```text
+metric                     n    pearson_r    spearman_rho
+within_region_enrichment  106  0.77796      0.72685
+outside_region_enrichment 106  0.77797      0.71222
+total_h2                  106  0.92930      0.98205
+```
+
+## Repository Changes From Upstream LDSC
+
+This fork includes:
+
+- Python 3 syntax and runtime compatibility.
+- pandas API updates for pandas 1.5.
+- package-relative imports in `ldscore`.
+- modern NumPy least-squares calls with explicit `rcond=None`.
+- Slurm scripts for SV sLDSC workflows.
+- scripts to compare sLDSC SV enrichment with MiXeR-SV estimates.
 
 ## Citation
 
-If you use the software or the LD Score regression intercept, please cite
+If you use LDSC, cite the original LDSC papers:
 
-[Bulik-Sullivan, et al. LD Score Regression Distinguishes Confounding from Polygenicity in Genome-Wide Association Studies.
-Nature Genetics, 2015.](http://www.nature.com/ng/journal/vaop/ncurrent/full/ng.3211.html)
-
-For genetic correlation, please also cite
-
-[Bulik-Sullivan, B., et al. An Atlas of Genetic Correlations across Human Diseases and Traits. Nature Genetics, 2015.](https://www.nature.com/articles/ng.3406) Preprint available on bioRxiv doi: http://dx.doi.org/10.1101/014498
-
-For partitioned heritability, please also cite
-
-[Finucane, HK, et al. Partitioning heritability by functional annotation using genome-wide association summary statistics. Nature Genetics, 2015.](https://www.nature.com/articles/ng.3404) Preprint available on bioRxiv doi: http://dx.doi.org/10.1101/014241
-
-For stratified heritability using continuous annotation, please also cite
-
-[Gazal, S, et al. Linkage disequilibrium–dependent architecture of human complex traits shows action of negative selection. Nature Genetics, 2017.](https://www.nature.com/articles/ng.3954) 
-
-If you find the fact that LD Score regression approximates HE regression to be conceptually useful, please cite
-
-Bulik-Sullivan, Brendan. Relationship between LD Score and Haseman-Elston, bioRxiv doi: http://dx.doi.org/10.1101/018283
-
-For LD Hub, please cite
-
-[Zheng, et al. LD Hub: a centralized database and web interface to perform LD score regression that maximizes the potential of summary level GWAS data for SNP heritability and genetic correlation analysis. Bioinformatics (2016)](https://doi.org/10.1093/bioinformatics/btw613)
-
+- Bulik-Sullivan et al. LD Score Regression Distinguishes Confounding from
+  Polygenicity in Genome-Wide Association Studies. Nature Genetics, 2015.
+- Bulik-Sullivan et al. An Atlas of Genetic Correlations across Human Diseases
+  and Traits. Nature Genetics, 2015.
+- Finucane et al. Partitioning heritability by functional annotation using
+  genome-wide association summary statistics. Nature Genetics, 2015.
 
 ## License
 
-This project is licensed under GNU GPL v3.
-
-
-## Authors
-
-Brendan Bulik-Sullivan (Broad Institute of MIT and Harvard)
-
-Hilary Finucane (MIT Department of Mathematics)
+LDSC is distributed under the GNU GPL v3 license.
